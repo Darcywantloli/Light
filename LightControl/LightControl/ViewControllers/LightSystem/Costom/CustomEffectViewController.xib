@@ -38,7 +38,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gS-Zd-OFP">
-                    <rect key="frame" x="39" y="358" width="315" height="213"/>
+                    <rect key="frame" x="39.333333333333343" y="358" width="314.33333333333326" height="213"/>
                 </pickerView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwS-N1-aDl">
                     <rect key="frame" x="39.333333333333343" y="646" width="314.33333333333326" height="42.666666666666629"/>
@@ -48,56 +48,83 @@
                         <action selector="saveEffectComponents:" destination="-1" eventType="touchUpInside" id="6XF-Ja-5Ww"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmE-Wg-x01">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmE-Wg-x01">
                     <rect key="frame" x="180.66666666666666" y="251.66666666666666" width="31.666666666666657" height="31.333333333333343"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="GmE-Wg-x01" secondAttribute="height" id="gXu-9S-8c9"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="lightbulb.fill" catalog="system"/>
+                    <connections>
+                        <action selector="lightOnOff:" destination="-1" eventType="touchUpInside" id="U3n-H4-uRG"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQ4-1O-iM1">
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQ4-1O-iM1">
                     <rect key="frame" x="217.33333333333334" y="251.66666666666666" width="31.333333333333343" height="31.333333333333343"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="TQ4-1O-iM1" secondAttribute="height" id="H95-FK-Frm"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="lightbulb.fill" catalog="system"/>
+                    <connections>
+                        <action selector="lightOnOff:" destination="-1" eventType="touchUpInside" id="BiO-7h-a9c"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ky-zY-5zq">
+                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ky-zY-5zq">
                     <rect key="frame" x="253.66666666666666" y="251.66666666666666" width="31.333333333333343" height="31.333333333333343"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="lightbulb.fill" catalog="system"/>
+                    <connections>
+                        <action selector="lightOnOff:" destination="-1" eventType="touchUpInside" id="wHy-wS-nMp"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOS-Bv-GjZ">
+                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOS-Bv-GjZ">
                     <rect key="frame" x="290" y="251.66666666666666" width="31.666666666666686" height="31.333333333333343"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="lightbulb.fill" catalog="system"/>
+                    <connections>
+                        <action selector="lightOnOff:" destination="-1" eventType="touchUpInside" id="Mgb-cV-DYs"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmB-rz-sRo">
+                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmB-rz-sRo">
                     <rect key="frame" x="326.66666666666669" y="251.66666666666666" width="31.333333333333314" height="31.333333333333343"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="lightbulb.fill" catalog="system"/>
+                    <connections>
+                        <action selector="lightOnOff:" destination="-1" eventType="touchUpInside" id="Sfp-fA-w3P"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niz-hG-PgQ">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niz-hG-PgQ">
                     <rect key="frame" x="144.33333333333334" y="251.66666666666666" width="31.333333333333343" height="31.333333333333343"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="lightbulb.fill" catalog="system"/>
+                    <connections>
+                        <action selector="lightOnOff:" destination="-1" eventType="touchUpInside" id="Dp5-ES-6JE"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWb-Sp-3br">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWb-Sp-3br">
                     <rect key="frame" x="108" y="251.66666666666666" width="31.333333333333343" height="31.333333333333343"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="lightbulb.fill" catalog="system"/>
+                    <connections>
+                        <action selector="lightOnOff:" destination="-1" eventType="touchUpInside" id="orI-wE-Qns"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3m-Ov-UJT">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3m-Ov-UJT">
                     <rect key="frame" x="71.333333333333329" y="251.66666666666666" width="31.666666666666671" height="31.333333333333343"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="lightbulb.fill" catalog="system"/>
+                    <connections>
+                        <action selector="lightOnOff:" destination="-1" eventType="touchUpInside" id="1YE-yD-1qy"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvZ-r2-udf">
                     <rect key="frame" x="35" y="251.66666666666666" width="31.333333333333329" height="31.333333333333343"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="lightbulb.fill" catalog="system"/>
+                    <connections>
+                        <action selector="lightOnOff:" destination="-1" eventType="touchUpInside" id="5tK-ac-hT9"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

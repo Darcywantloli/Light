@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A9E1AF9296BAC15096BA25C /* Pods_LightControl_LightControlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEDEFB241CB08D834CACBD6 /* Pods_LightControl_LightControlUITests.framework */; };
+		528341F03BB0C8A4A6F3C10F /* Pods_LightControlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F79B3720F54C21789FAE20 /* Pods_LightControlTests.framework */; };
 		7C2F353329FA5E38002E16EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F353229FA5E38002E16EB /* AppDelegate.swift */; };
 		7C2F353529FA5E38002E16EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F353429FA5E38002E16EB /* SceneDelegate.swift */; };
 		7C2F353C29FA5E3A002E16EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F353B29FA5E3A002E16EB /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		7C4409702A18F6DA00C68A1E /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C44096F2A18F6DA00C68A1E /* Effect.swift */; };
 		7C4409742A18F83300C68A1E /* PreviewEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4409722A18F83300C68A1E /* PreviewEffectViewController.swift */; };
 		7C4409752A18F83300C68A1E /* PreviewEffectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4409732A18F83300C68A1E /* PreviewEffectViewController.xib */; };
+		7C4409792A1B501C00C68A1E /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4409782A1B501C00C68A1E /* Light.swift */; };
+		8AE3840C003EA6F3E90A5571 /* Pods_LightControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822650A1DA62BBCDDE66852F /* Pods_LightControl.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1ACF5A8541DCF8FBAF10FB80 /* Pods-LightControl-LightControlUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControl-LightControlUITests.debug.xcconfig"; path = "Target Support Files/Pods-LightControl-LightControlUITests/Pods-LightControl-LightControlUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		280664434EC73328371E7CDE /* Pods-LightControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControl.debug.xcconfig"; path = "Target Support Files/Pods-LightControl/Pods-LightControl.debug.xcconfig"; sourceTree = "<group>"; };
+		3D9DB7ED34699E26ADB0CBCD /* Pods-LightControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControl.release.xcconfig"; path = "Target Support Files/Pods-LightControl/Pods-LightControl.release.xcconfig"; sourceTree = "<group>"; };
+		67F79B3720F54C21789FAE20 /* Pods_LightControlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightControlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2F352F29FA5E38002E16EB /* LightControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2F353229FA5E38002E16EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C2F353429FA5E38002E16EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +117,12 @@
 		7C44096F2A18F6DA00C68A1E /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
 		7C4409722A18F83300C68A1E /* PreviewEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewEffectViewController.swift; sourceTree = "<group>"; };
 		7C4409732A18F83300C68A1E /* PreviewEffectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewEffectViewController.xib; sourceTree = "<group>"; };
+		7C4409782A1B501C00C68A1E /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		822650A1DA62BBCDDE66852F /* Pods_LightControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD52DF8A98582A960B75D4B /* Pods-LightControlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControlTests.debug.xcconfig"; path = "Target Support Files/Pods-LightControlTests/Pods-LightControlTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9956F3C3B4F026C4956CD6BC /* Pods-LightControlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControlTests.release.xcconfig"; path = "Target Support Files/Pods-LightControlTests/Pods-LightControlTests.release.xcconfig"; sourceTree = "<group>"; };
+		ACEDEFB241CB08D834CACBD6 /* Pods_LightControl_LightControlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightControl_LightControlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D1007C413000FE55FF4C05 /* Pods-LightControl-LightControlUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControl-LightControlUITests.release.xcconfig"; path = "Target Support Files/Pods-LightControl-LightControlUITests/Pods-LightControl-LightControlUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE3840C003EA6F3E90A5571 /* Pods_LightControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528341F03BB0C8A4A6F3C10F /* Pods_LightControlTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9E1AF9296BAC15096BA25C /* Pods_LightControl_LightControlUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +160,8 @@
 				7C2F354829FA5E3B002E16EB /* LightControlTests */,
 				7C2F355229FA5E3B002E16EB /* LightControlUITests */,
 				7C2F353029FA5E38002E16EB /* Products */,
+				D3D7CAD46BE3A508EF4EBBBD /* Pods */,
+				CF3C828C866432B387B96DB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +213,7 @@
 				7C2F35762A08E757002E16EB /* Alert.swift */,
 				7C2F35782A08F504002E16EB /* UserPreference.swift */,
 				7C44096F2A18F6DA00C68A1E /* Effect.swift */,
+				7C44097A2A1B5FFA00C68A1E /* Database */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +333,37 @@
 			path = Preview;
 			sourceTree = "<group>";
 		};
+		7C44097A2A1B5FFA00C68A1E /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				7C4409782A1B501C00C68A1E /* Light.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		CF3C828C866432B387B96DB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				822650A1DA62BBCDDE66852F /* Pods_LightControl.framework */,
+				ACEDEFB241CB08D834CACBD6 /* Pods_LightControl_LightControlUITests.framework */,
+				67F79B3720F54C21789FAE20 /* Pods_LightControlTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3D7CAD46BE3A508EF4EBBBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				280664434EC73328371E7CDE /* Pods-LightControl.debug.xcconfig */,
+				3D9DB7ED34699E26ADB0CBCD /* Pods-LightControl.release.xcconfig */,
+				1ACF5A8541DCF8FBAF10FB80 /* Pods-LightControl-LightControlUITests.debug.xcconfig */,
+				D4D1007C413000FE55FF4C05 /* Pods-LightControl-LightControlUITests.release.xcconfig */,
+				8FD52DF8A98582A960B75D4B /* Pods-LightControlTests.debug.xcconfig */,
+				9956F3C3B4F026C4956CD6BC /* Pods-LightControlTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,9 +371,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C2F355929FA5E3B002E16EB /* Build configuration list for PBXNativeTarget "LightControl" */;
 			buildPhases = (
+				C94807B40C17F71231E21EDC /* [CP] Check Pods Manifest.lock */,
 				7C2F352B29FA5E38002E16EB /* Sources */,
 				7C2F352C29FA5E38002E16EB /* Frameworks */,
 				7C2F352D29FA5E38002E16EB /* Resources */,
+				497971C85C8CF3ED220CDE15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,6 +390,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C2F355C29FA5E3B002E16EB /* Build configuration list for PBXNativeTarget "LightControlTests" */;
 			buildPhases = (
+				881D08FCC2DBE208A9C98664 /* [CP] Check Pods Manifest.lock */,
 				7C2F354129FA5E3B002E16EB /* Sources */,
 				7C2F354229FA5E3B002E16EB /* Frameworks */,
 				7C2F354329FA5E3B002E16EB /* Resources */,
@@ -355,9 +409,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C2F355F29FA5E3B002E16EB /* Build configuration list for PBXNativeTarget "LightControlUITests" */;
 			buildPhases = (
+				7C2DC97FA93C132A1659887F /* [CP] Check Pods Manifest.lock */,
 				7C2F354B29FA5E3B002E16EB /* Sources */,
 				7C2F354C29FA5E3B002E16EB /* Frameworks */,
 				7C2F354D29FA5E3B002E16EB /* Resources */,
+				553599EE46C718D0261EBCD2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -452,12 +508,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		497971C85C8CF3ED220CDE15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightControl/Pods-LightControl-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightControl/Pods-LightControl-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LightControl/Pods-LightControl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		553599EE46C718D0261EBCD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightControl-LightControlUITests/Pods-LightControl-LightControlUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightControl-LightControlUITests/Pods-LightControl-LightControlUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LightControl-LightControlUITests/Pods-LightControl-LightControlUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C2DC97FA93C132A1659887F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LightControl-LightControlUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		881D08FCC2DBE208A9C98664 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LightControlTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C94807B40C17F71231E21EDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LightControl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C2F352B29FA5E38002E16EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7C2F365C2A14D159002E16EB /* CustomListViewController.swift in Sources */,
+				7C4409792A1B501C00C68A1E /* Light.swift in Sources */,
 				7C2F366A2A158681002E16EB /* EffectListViewController.swift in Sources */,
 				7C2F36492A138554002E16EB /* LightSystemViewController.swift in Sources */,
 				7C2F36772A1590BA002E16EB /* DefaultEffectTableViewCell.swift in Sources */,
@@ -640,6 +800,7 @@
 		};
 		7C2F355A29FA5E3B002E16EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 280664434EC73328371E7CDE /* Pods-LightControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -670,6 +831,7 @@
 		};
 		7C2F355B29FA5E3B002E16EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D9DB7ED34699E26ADB0CBCD /* Pods-LightControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -700,6 +862,7 @@
 		};
 		7C2F355D29FA5E3B002E16EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FD52DF8A98582A960B75D4B /* Pods-LightControlTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -719,6 +882,7 @@
 		};
 		7C2F355E29FA5E3B002E16EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9956F3C3B4F026C4956CD6BC /* Pods-LightControlTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -738,6 +902,7 @@
 		};
 		7C2F356029FA5E3B002E16EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ACF5A8541DCF8FBAF10FB80 /* Pods-LightControl-LightControlUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -755,6 +920,7 @@
 		};
 		7C2F356129FA5E3B002E16EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4D1007C413000FE55FF4C05 /* Pods-LightControl-LightControlUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

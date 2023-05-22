@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 class PreviewEffectViewController: UIViewController {
     
@@ -20,14 +21,24 @@ class PreviewEffectViewController: UIViewController {
     @IBOutlet weak var seventhLightImageView: UIImageView!
     @IBOutlet weak var eighthLightImageView: UIImageView!
     @IBOutlet weak var ninethLightImageView: UIImageView!
+    
     @IBOutlet weak var runButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     // MARK: - Variables
     
-    var lightTry = true
+    var loop = false
     
     var previewLightCode: [String] = []
     var previewTime: [Double] = []
+    
+    var lightType = ""
+    var lastLight = ""
+    
+    let bluetoothService = BluetoothServices.shared
+    
+    var peripheral: CBPeripheral? = BluetoothServices.shared.connectedPeripheral
+    var characteristic: CBCharacteristic? = BluetoothServices.shared.rxtxCharacteristic
     
     // MARK: - LifeCycle
     
@@ -41,7 +52,6 @@ class PreviewEffectViewController: UIViewController {
     
     func setupUI() {
         setupButton()
-        setupImageView()
     }
     
     private func setupButton() {
@@ -49,18 +59,11 @@ class PreviewEffectViewController: UIViewController {
         runButton.setTitle("預覽", for: .normal)
         runButton.setTitleColor(.white, for: .normal)
         runButton.layer.cornerRadius = runButton.frame.height / 6
-    }
-    
-    private func setupImageView() {
-        firstLightImageView.image = UIImage(systemName: "lightbulb")
-        secondLightImageView.image = UIImage(systemName: "lightbulb")
-        thirdLightImageView.image = UIImage(systemName: "lightbulb")
-        fourthLightImageView.image = UIImage(systemName: "lightbulb")
-        fifthLightImageView.image = UIImage(systemName: "lightbulb")
-        sixthLightImageView.image = UIImage(systemName: "lightbulb")
-        seventhLightImageView.image = UIImage(systemName: "lightbulb")
-        eighthLightImageView.image = UIImage(systemName: "lightbulb")
-        ninethLightImageView.image = UIImage(systemName: "lightbulb")
+        
+        backButton.backgroundColor = .systemBlue
+        backButton.setTitle("返回", for: .normal)
+        backButton.setTitleColor(.white, for: .normal)
+        backButton.layer.cornerRadius = backButton.frame.height / 6
     }
     
     // MARK: - Function
@@ -68,51 +71,101 @@ class PreviewEffectViewController: UIViewController {
     func timeControl(lightCode: [String], times: [Double]) {
         var light = 0
         
-//        times.forEach { time in
-//            DispatchQueue.main.asyncAfter(deadline: .now() + time) {
-//                print(lightCode[light])
-//                self.lightControl(light: lightCode[light])
-//                light += 1
-//            }
-//        }
+        let data = "C".data(using: .utf8)
         
         for time in times {
-            Thread.sleep(forTimeInterval: time)
-            print(lightCode[light])
             lightControl(light: lightCode[light])
+            Thread.sleep(forTimeInterval: time)
             light += 1
         }
+
+        bluetoothService.writeValue(peripheral: peripheral!,
+                                    characteristic: characteristic!,
+                                    type: .withoutResponse,
+                                    data: data!)
     }
     
     func lightControl(light: String) {
         let lights = Array(light)
+        let data = "C".data(using: .utf8)
+        
+        bluetoothService.writeValue(peripheral: peripheral!,
+                                    characteristic: characteristic!,
+                                    type: .withoutResponse,
+                                    data: data!)
         for component in lights {
+            Thread.sleep(forTimeInterval: 0.004)
             if component == "1" {
-                firstLightImageView.image = UIImage(systemName: "lightbulb.fill")
+                let data = "1".data(using: .utf8)
+                
+                bluetoothService.writeValue(peripheral: peripheral!,
+                                            characteristic: characteristic!,
+                                            type: .withoutResponse,
+                                            data: data!)
             }
             if component == "2" {
-                secondLightImageView.image = UIImage(systemName: "lightbulb.fill")
+                let data = "2".data(using: .utf8)
+                
+                bluetoothService.writeValue(peripheral: peripheral!,
+                                            characteristic: characteristic!,
+                                            type: .withoutResponse,
+                                            data: data!)
             }
             if component == "3" {
-                thirdLightImageView.image = UIImage(systemName: "lightbulb.fill")
+                let data = "3".data(using: .utf8)
+                
+                bluetoothService.writeValue(peripheral: peripheral!,
+                                            characteristic: characteristic!,
+                                            type: .withoutResponse,
+                                            data: data!)
             }
             if component == "4" {
-                fourthLightImageView.image = UIImage(systemName: "lightbulb.fill")
+                let data = "4".data(using: .utf8)
+                
+                bluetoothService.writeValue(peripheral: peripheral!,
+                                            characteristic: characteristic!,
+                                            type: .withoutResponse,
+                                            data: data!)
             }
             if component == "5" {
-                fifthLightImageView.image = UIImage(systemName: "lightbulb.fill")
+                let data = "5".data(using: .utf8)
+                
+                bluetoothService.writeValue(peripheral: peripheral!,
+                                            characteristic: characteristic!,
+                                            type: .withoutResponse,
+                                            data: data!)
             }
             if component == "6" {
-                sixthLightImageView.image = UIImage(systemName: "lightbulb.fill")
+                let data = "6".data(using: .utf8)
+                
+                bluetoothService.writeValue(peripheral: peripheral!,
+                                            characteristic: characteristic!,
+                                            type: .withoutResponse,
+                                            data: data!)
             }
             if component == "7" {
-                seventhLightImageView.image = UIImage(systemName: "lightbulb.fill")
+                let data = "7".data(using: .utf8)
+                
+                bluetoothService.writeValue(peripheral: peripheral!,
+                                            characteristic: characteristic!,
+                                            type: .withoutResponse,
+                                            data: data!)
             }
             if component == "8" {
-                eighthLightImageView.image = UIImage(systemName: "lightbulb.fill")
+                let data = "8".data(using: .utf8)
+                
+                bluetoothService.writeValue(peripheral: peripheral!,
+                                            characteristic: characteristic!,
+                                            type: .withoutResponse,
+                                            data: data!)
             }
             if component == "9" {
-                ninethLightImageView.image = UIImage(systemName: "lightbulb.fill")
+                let data = "9".data(using: .utf8)
+                
+                bluetoothService.writeValue(peripheral: peripheral!,
+                                            characteristic: characteristic!,
+                                            type: .withoutResponse,
+                                            data: data!)
             }
         }
     }
@@ -120,7 +173,10 @@ class PreviewEffectViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func runEffect(_ sender: Any) {
-//        print(previewLightCode, previewTime)
         timeControl(lightCode: previewLightCode, times: previewTime)
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true)
     }
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class CustomEffectViewController: UIViewController {
 
+    // MARK: - IBOutlet
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var firstLightButton: UIButton!
@@ -24,11 +26,20 @@ class CustomEffectViewController: UIViewController {
     
     @IBOutlet weak var timePickerView: UIPickerView!
     
+    // MARK: - Variables
+    
+    var lights: [Bool] = [false, false, false, false, false, false, false, false, false]
+    var time: String = ""
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
     }
+    
+    // MARK: - UI Settings
     
     func setupUI() {
         self.title = "新增特效"
@@ -64,21 +75,82 @@ class CustomEffectViewController: UIViewController {
         timePickerView.dataSource = self
     }
     
+    // MARK: - Function
+    
+    // MARK: - IBAction
+    
+    @IBAction func lightOnOff(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            if lights[sender.tag] {
+                firstLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            } else {
+                firstLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            }
+            lights[sender.tag] = !lights[sender.tag]
+        case 1:
+            lights[sender.tag] = !lights[sender.tag]
+        case 2:
+            lights[sender.tag] = !lights[sender.tag]
+        case 3:
+            lights[sender.tag] = !lights[sender.tag]
+        case 4:
+            lights[sender.tag] = !lights[sender.tag]
+        case 5:
+            lights[sender.tag] = !lights[sender.tag]
+        case 6:
+            lights[sender.tag] = !lights[sender.tag]
+        case 7:
+            lights[sender.tag] = !lights[sender.tag]
+        case 8:
+            lights[sender.tag] = !lights[sender.tag]
+        default:
+            break
+        }
+    }
+    
     @IBAction func saveEffectComponents(_ sender: Any) {
+        
         self.navigationController?.popViewController(animated: true)
     }
 }
 
+// MARK: - UIPickerViewDelegate, UIPickerViewDataSource
+
 extension CustomEffectViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 100
+        switch component {
+        case 0:
+            return 100
+        case 1:
+            return 1
+        default:
+            return 0
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(Float(row + 1) / 10) + "s"
+        switch component {
+        case 0:
+            return String(Float(row + 1) / 10)
+        case 1:
+            return "sec"
+        default:
+            return ""
+        }
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        time = row.description
+    }
+}
+
+// MARK: - CustomEffectDelegate
+
+protocol CustomEffectDelegate: NSObject {
+    
 }

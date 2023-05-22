@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        let rootVC = MainViewController()
+        let rootVC = AutoSearchBLEViewController()
         let navigationController = UINavigationController(rootViewController: rootVC)
         window = UIWindow(frame: windowSence.coordinateSpace.bounds)
         window?.windowScene = windowSence

@@ -11,7 +11,9 @@ class DefaultEffectViewController: UIViewController {
 
     @IBOutlet weak var effectListTableView: UITableView!
     
-    var effectCode = "1:1 12:1 123:1 1234:1 12345:1 123456:1 1234567:1 12345678:1 123456789:1"
+    var defauleEffectName = ["跑馬燈"]
+    
+    var defaultEffectLightCode = ["1:0.1 2:0.1 3:0.1 4:0.1 5:0.1 6:0.1 7:0.1 8:0.1 9:0.1"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,21 +37,34 @@ class DefaultEffectViewController: UIViewController {
 
 extension DefaultEffectViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if defauleEffectName.count == defaultEffectLightCode.count {
+            return defauleEffectName.count
+        } else {
+            Alert.showAlert(title: "錯誤",
+                            message: "特效丟失",
+                            vc: self,
+                            confirmTitle: "確認")
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DefaultEffectTableViewCell.identifier,
                                                  for: indexPath) as! DefaultEffectTableViewCell
-        cell.effectNameLabel.text = "跑馬燈"
-        cell.timeLabel.text = "10s"
+        
+        let times = Effect.effectCodeDecoder(effectCode: defaultEffectLightCode[indexPath.row]).time
+        let totalTime = String(format: "%.2f", ceil(Effect.countTotalTime(times: times) * 100) / 100)
+        
+        cell.effectNameLabel.text = defauleEffectName[indexPath.row]
+        cell.timeLabel.text = "\(totalTime)s"
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let lightCodeAndTime = Effect.effectCodeDecoder(effectCode: effectCode)
-        let lightCode = lightCodeAndTime.lightCode,
-            time = lightCodeAndTime.time
+        let lightCodeWithTime = Effect.effectCodeDecoder(effectCode: defaultEffectLightCode[indexPath.row])
+        let lightCode = lightCodeWithTime.lightCode,
+            time = lightCodeWithTime.time
         
         let previewEffect = PreviewEffectViewController()
         

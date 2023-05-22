@@ -28,4 +28,14 @@ class Effect {
         
         return (lightCode, time)
     }
+    
+    static func countTotalTime(times: [Double]) -> Double {
+        var totalTime: Double = 0
+        
+        for time in times {
+            totalTime += time
+        }
+        
+        return totalTime
+    }
 }
