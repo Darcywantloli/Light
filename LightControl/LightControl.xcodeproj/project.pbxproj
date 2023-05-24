@@ -46,9 +46,9 @@
 		7C2F367F2A15E57F002E16EB /* EffectComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F367D2A15E57F002E16EB /* EffectComponentTableViewCell.swift */; };
 		7C2F36802A15E57F002E16EB /* EffectComponentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F367E2A15E57F002E16EB /* EffectComponentTableViewCell.xib */; };
 		7C4409702A18F6DA00C68A1E /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C44096F2A18F6DA00C68A1E /* Effect.swift */; };
-		7C4409742A18F83300C68A1E /* PreviewEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4409722A18F83300C68A1E /* PreviewEffectViewController.swift */; };
-		7C4409752A18F83300C68A1E /* PreviewEffectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4409732A18F83300C68A1E /* PreviewEffectViewController.xib */; };
 		7C4409792A1B501C00C68A1E /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4409782A1B501C00C68A1E /* Light.swift */; };
+		7C44097C2A1CA81900C68A1E /* LocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C44097B2A1CA81800C68A1E /* LocalDatabase.swift */; };
+		7C44097E2A1CB54100C68A1E /* PreviewEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C44097D2A1CB54100C68A1E /* PreviewEffect.swift */; };
 		8AE3840C003EA6F3E90A5571 /* Pods_LightControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822650A1DA62BBCDDE66852F /* Pods_LightControl.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,9 +115,9 @@
 		7C2F367D2A15E57F002E16EB /* EffectComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectComponentTableViewCell.swift; sourceTree = "<group>"; };
 		7C2F367E2A15E57F002E16EB /* EffectComponentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EffectComponentTableViewCell.xib; sourceTree = "<group>"; };
 		7C44096F2A18F6DA00C68A1E /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
-		7C4409722A18F83300C68A1E /* PreviewEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewEffectViewController.swift; sourceTree = "<group>"; };
-		7C4409732A18F83300C68A1E /* PreviewEffectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewEffectViewController.xib; sourceTree = "<group>"; };
 		7C4409782A1B501C00C68A1E /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		7C44097B2A1CA81800C68A1E /* LocalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabase.swift; sourceTree = "<group>"; };
+		7C44097D2A1CB54100C68A1E /* PreviewEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewEffect.swift; sourceTree = "<group>"; };
 		822650A1DA62BBCDDE66852F /* Pods_LightControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD52DF8A98582A960B75D4B /* Pods-LightControlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControlTests.debug.xcconfig"; path = "Target Support Files/Pods-LightControlTests/Pods-LightControlTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9956F3C3B4F026C4956CD6BC /* Pods-LightControlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControlTests.release.xcconfig"; path = "Target Support Files/Pods-LightControlTests/Pods-LightControlTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +214,7 @@
 				7C2F35782A08F504002E16EB /* UserPreference.swift */,
 				7C44096F2A18F6DA00C68A1E /* Effect.swift */,
 				7C44097A2A1B5FFA00C68A1E /* Database */,
+				7C44097D2A1CB54100C68A1E /* PreviewEffect.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,7 +267,6 @@
 				7C2F36482A138554002E16EB /* LightSystemViewController.xib */,
 				7C2F36662A158618002E16EB /* Default */,
 				7C2F36672A15863B002E16EB /* Costom */,
-				7C4409712A18F80600C68A1E /* Preview */,
 			);
 			path = LightSystem;
 			sourceTree = "<group>";
@@ -324,19 +324,11 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
-		7C4409712A18F80600C68A1E /* Preview */ = {
-			isa = PBXGroup;
-			children = (
-				7C4409722A18F83300C68A1E /* PreviewEffectViewController.swift */,
-				7C4409732A18F83300C68A1E /* PreviewEffectViewController.xib */,
-			);
-			path = Preview;
-			sourceTree = "<group>";
-		};
 		7C44097A2A1B5FFA00C68A1E /* Database */ = {
 			isa = PBXGroup;
 			children = (
 				7C4409782A1B501C00C68A1E /* Light.swift */,
+				7C44097B2A1CA81800C68A1E /* LocalDatabase.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -487,7 +479,6 @@
 				7C2F353C29FA5E3A002E16EB /* Assets.xcassets in Resources */,
 				7C2F36782A1590BA002E16EB /* DefaultEffectTableViewCell.xib in Resources */,
 				7C2F366B2A158681002E16EB /* EffectListViewController.xib in Resources */,
-				7C4409752A18F83300C68A1E /* PreviewEffectViewController.xib in Resources */,
 				7C2F356E2A023F68002E16EB /* PeripheralTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,8 +613,8 @@
 				7C2F36492A138554002E16EB /* LightSystemViewController.swift in Sources */,
 				7C2F36772A1590BA002E16EB /* DefaultEffectTableViewCell.swift in Sources */,
 				7C2F35672A023527002E16EB /* BluetoothServices.swift in Sources */,
+				7C44097C2A1CA81900C68A1E /* LocalDatabase.swift in Sources */,
 				7C2F356429FA5F86002E16EB /* SelectPeripheralController.swift in Sources */,
-				7C4409742A18F83300C68A1E /* PreviewEffectViewController.swift in Sources */,
 				7C2F364D2A1385E5002E16EB /* MessageSystemViewController.swift in Sources */,
 				7C4409702A18F6DA00C68A1E /* Effect.swift in Sources */,
 				7C2F367F2A15E57F002E16EB /* EffectComponentTableViewCell.swift in Sources */,
@@ -635,6 +626,7 @@
 				7C2F35792A08F504002E16EB /* UserPreference.swift in Sources */,
 				7C2F357D2A0B743C002E16EB /* MainViewController.swift in Sources */,
 				7C2F35742A08E60B002E16EB /* AutoSearchBLEViewController.swift in Sources */,
+				7C44097E2A1CB54100C68A1E /* PreviewEffect.swift in Sources */,
 				7C2F35772A08E757002E16EB /* Alert.swift in Sources */,
 				7C2F36512A14CD40002E16EB /* DefaultEffectViewController.swift in Sources */,
 			);

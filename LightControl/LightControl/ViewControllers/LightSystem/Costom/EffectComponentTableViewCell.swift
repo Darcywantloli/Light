@@ -25,13 +25,24 @@ class EffectComponentTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupImageView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
+    func setupImageView() {
+        firstLightImageView.image = UIImage(systemName: "lightbulb")
+        secondLightImageView.image = UIImage(systemName: "lightbulb")
+        thirdLightImageView.image = UIImage(systemName: "lightbulb")
+        fourthLightImageView.image = UIImage(systemName: "lightbulb")
+        fifthLightImageView.image = UIImage(systemName: "lightbulb")
+        sixthLightImageView.image = UIImage(systemName: "lightbulb")
+        seventhLightImageView.image = UIImage(systemName: "lightbulb")
+        eighthLightImageView.image = UIImage(systemName: "lightbulb")
+        ninethLightImageView.image = UIImage(systemName: "lightbulb")
+    }
 }

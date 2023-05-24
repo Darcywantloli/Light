@@ -15,15 +15,15 @@ class DefaultEffectViewController: UIViewController {
     
     var defaultEffectLightCode = ["1:0.1 2:0.1 3:0.1 4:0.1 5:0.1 6:0.1 7:0.1 8:0.1 9:0.1"]
     
+    private let previewEffect = PreviewEffect()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUI()
     }
     
     func setupUI() {
         self.title = "內建特效"
-        
         setupTableView()
     }
     
@@ -35,7 +35,12 @@ class DefaultEffectViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
+
 extension DefaultEffectViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    // UITableViewDataSource
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if defauleEffectName.count == defaultEffectLightCode.count {
             return defauleEffectName.count
@@ -61,17 +66,17 @@ extension DefaultEffectViewController: UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
+    // UITableViewDelegate
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
         let lightCodeWithTime = Effect.effectCodeDecoder(effectCode: defaultEffectLightCode[indexPath.row])
-        let lightCode = lightCodeWithTime.lightCode,
-            time = lightCodeWithTime.time
+        let lightCode = lightCodeWithTime.lightCode
+        let time = lightCodeWithTime.time
         
-        let previewEffect = PreviewEffectViewController()
-        
-        previewEffect.previewLightCode = lightCode
-        previewEffect.previewTime = time
-        
-        present(previewEffect, animated: true)
+        previewEffect.timeControl(lightCode: lightCode,
+                                  times: time,
+                                  bluetoothService: BluetoothServices.shared)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

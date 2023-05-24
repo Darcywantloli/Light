@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomEffectViewController: UIViewController {
-
+    
     // MARK: - IBOutlet
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -30,6 +30,8 @@ class CustomEffectViewController: UIViewController {
     
     var lights: [Bool] = [false, false, false, false, false, false, false, false, false]
     var time: String = ""
+    
+    weak var delegate: CustomEffectDelegate?
     
     // MARK: - LifeCycle
     
@@ -82,34 +84,75 @@ class CustomEffectViewController: UIViewController {
     @IBAction func lightOnOff(_ sender: UIButton) {
         switch sender.tag {
         case 0:
+            lights[sender.tag] = !lights[sender.tag]
             if lights[sender.tag] {
                 firstLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
             } else {
-                firstLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+                firstLightButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
             }
-            lights[sender.tag] = !lights[sender.tag]
         case 1:
             lights[sender.tag] = !lights[sender.tag]
+            if lights[sender.tag] {
+                secondLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            } else {
+                secondLightButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
+            }
         case 2:
             lights[sender.tag] = !lights[sender.tag]
+            if lights[sender.tag] {
+                thirdLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            } else {
+                thirdLightButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
+            }
         case 3:
             lights[sender.tag] = !lights[sender.tag]
+            if lights[sender.tag] {
+                fourthLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            } else {
+                fourthLightButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
+            }
         case 4:
             lights[sender.tag] = !lights[sender.tag]
+            if lights[sender.tag] {
+                fifthLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            } else {
+                fifthLightButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
+            }
         case 5:
             lights[sender.tag] = !lights[sender.tag]
+            if lights[sender.tag] {
+                sixthLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            } else {
+                sixthLightButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
+            }
         case 6:
             lights[sender.tag] = !lights[sender.tag]
+            if lights[sender.tag] {
+                seventhLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            } else {
+                seventhLightButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
+            }
         case 7:
             lights[sender.tag] = !lights[sender.tag]
+            if lights[sender.tag] {
+                eighthLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            } else {
+                eighthLightButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
+            }
         case 8:
             lights[sender.tag] = !lights[sender.tag]
+            if lights[sender.tag] {
+                ninethLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            } else {
+                ninethLightButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
+            }
         default:
             break
         }
     }
     
     @IBAction func saveEffectComponents(_ sender: Any) {
+        delegate?.getLightAndTime(lights: lights, time: time)
         
         self.navigationController?.popViewController(animated: true)
     }
@@ -118,39 +161,31 @@ class CustomEffectViewController: UIViewController {
 // MARK: - UIPickerViewDelegate, UIPickerViewDataSource
 
 extension CustomEffectViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch component {
-        case 0:
-            return 100
-        case 1:
-            return 1
-        default:
-            return 0
-        }
+        return 100
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch component {
-        case 0:
-            return String(Float(row + 1) / 10)
-        case 1:
-            return "sec"
-        default:
-            return ""
-        }
+    func pickerView(_ pickerView: UIPickerView,
+                    titleForRow row: Int,
+                    forComponent component: Int) -> String? {
+        return String(Float(row + 1) / 10)
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        time = row.description
+    func pickerView(_ pickerView: UIPickerView,
+                    didSelectRow row: Int,
+                    inComponent component: Int) {
+        time = "\(Float(row + 1) / 10)"
     }
 }
 
 // MARK: - CustomEffectDelegate
 
-protocol CustomEffectDelegate: NSObject {
+protocol CustomEffectDelegate: NSObjectProtocol {
     
+    func getLightAndTime(lights: [Bool], time: String)
 }

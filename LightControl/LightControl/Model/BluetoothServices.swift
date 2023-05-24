@@ -103,10 +103,11 @@ extension BluetoothServices: CBCentralManagerDelegate {
         peripheral.discoverServices(nil)
     }
     
-    func writeValue(peripheral: CBPeripheral,
-                    characteristic: CBCharacteristic,
-                    type: CBCharacteristicWriteType,
-                    data: Data) {
+    func writeValue(type: CBCharacteristicWriteType, data: Data) {
+        guard let peripheral = BluetoothServices.shared.connectedPeripheral,
+              let characteristic = BluetoothServices.shared.rxtxCharacteristic else {
+            return
+        }
         peripheral.writeValue(data, for: characteristic, type: type)
     }
 }
@@ -146,7 +147,9 @@ extension BluetoothServices: CBPeripheralDelegate {
         guard characteristic == rxtxCharacteristic,
               let characteristicValue = characteristic.value,
               let ASCIIstring = String(data: characteristicValue,
-                                       encoding: String.Encoding.utf8) else { return }
+                                       encoding: String.Encoding.utf8) else {
+            return
+        }
         characteristicASCIIValue = ASCIIstring
         print(characteristicASCIIValue)
     }

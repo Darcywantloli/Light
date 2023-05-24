@@ -8,9 +8,19 @@
 import Foundation
 
 class Effect {
-    static func effectCodeEncoder(lightCode: [String]) -> String {
+    static func effectCodeEncoder(lightCode: [String], time: [String]) -> String {
+        var lightCodeWithTime: String = ""
         
-        return "d"
+        if lightCode.count == time.count {
+            for index in 0...(lightCode.count - 1) {
+                lightCodeWithTime = lightCodeWithTime + "\(lightCode[index]):\(time[index]) "
+            }
+            lightCodeWithTime.removeLast()
+        }
+        
+        print(lightCodeWithTime)
+        
+        return lightCodeWithTime
     }
     
     static func effectCodeDecoder(effectCode: String) -> (lightCode: [String], time: [Double]) {
@@ -38,4 +48,16 @@ class Effect {
         
         return totalTime
     }
-}
+    
+    static func effectBoolToString(bools: [Bool]) -> String {
+        var effectString = ""
+        
+        for bool in 0...8 {
+            if bools[bool] {
+                effectString += "\(bool + 1)"
+            }
+        }
+        
+        return effectString
+    }
+ }
