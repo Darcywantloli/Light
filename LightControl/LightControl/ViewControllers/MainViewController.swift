@@ -84,17 +84,6 @@ class MainViewController: UIViewController {
                         vc: self,
                         confirmTitle: "確認")
     }
-    //    @IBAction func writeValueToPeripheral(_ sender: Any) {
-//        print(peripheral!)
-//        print(characteristic!)
-//
-//        var data: Data? = "N".data(using: .utf8)
-//
-//        bluetoothService.writeValue(peripheral: peripheral!,
-//                                    characteristic: characteristic!,
-//                                    type: .withoutResponse,
-//                                    data: data!)
-//    }
     
     @objc func reseachPeripheral() {
         let nextVC = SelectPeripheralController()
@@ -106,9 +95,5 @@ extension MainViewController: BluetoothServicesDelegate {
     
     func getBLEPeripherals(peripherals: [CBPeripheral]) {
     }
-    
-//    func getPeripheralAndCharacteristic(peripheral: CBPeripheral, characteristic: CBCharacteristic) {
-//        self.peripheral = peripheral
-//        self.characteristic = characteristic
-//    }
+
 }

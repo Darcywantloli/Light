@@ -213,8 +213,8 @@
 				7C2F35762A08E757002E16EB /* Alert.swift */,
 				7C2F35782A08F504002E16EB /* UserPreference.swift */,
 				7C44096F2A18F6DA00C68A1E /* Effect.swift */,
-				7C44097A2A1B5FFA00C68A1E /* Database */,
 				7C44097D2A1CB54100C68A1E /* PreviewEffect.swift */,
+				7C44097A2A1B5FFA00C68A1E /* Database */,
 			);
 			path = Model;
 			sourceTree = "<group>";

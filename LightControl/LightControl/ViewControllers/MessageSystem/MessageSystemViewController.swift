@@ -8,7 +8,7 @@
 import UIKit
 
 class MessageSystemViewController: UIViewController {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var messageTextField: UITextField!
@@ -17,7 +17,7 @@ class MessageSystemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
     }
     
@@ -27,6 +27,7 @@ class MessageSystemViewController: UIViewController {
         setupLabel()
         setupButton()
         setupTextField()
+        setupTapGestureRecognizer()
     }
     
     private func setupLabel() {
@@ -45,4 +46,21 @@ class MessageSystemViewController: UIViewController {
         messageTextField.placeholder = "顯示的訊息"
         messageTextField.backgroundColor = .lightGray
     }
+    
+    private func setupTapGestureRecognizer() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func closeKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @IBAction func sendMessage(_ sender: Any) {
+        let message = messageTextField.text
+        let testLCd = "\(message!)".data(using: .utf8)
+        
+        BluetoothServices.shared.writeValue(type: .withoutResponse, data: testLCd!)
+    }
+    
 }

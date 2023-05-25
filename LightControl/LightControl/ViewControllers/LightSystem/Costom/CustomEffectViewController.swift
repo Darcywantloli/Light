@@ -133,7 +133,7 @@ class CustomEffectViewController: UIViewController {
                 seventhLightButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
             }
         case 7:
-            lights[sender.tag] = !lights[sender.tag]
+            lights[sender.tag].toggle()
             if lights[sender.tag] {
                 eighthLightButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
             } else {

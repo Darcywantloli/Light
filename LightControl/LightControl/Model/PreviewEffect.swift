@@ -14,20 +14,22 @@ class PreviewEffect: NSObject {
                      bluetoothService: BluetoothServices) {
         var light = 0
         
-        let data = "C".data(using: .utf8)
+        let data = "0".data(using: .utf8)
+        let endData = "\n".data(using: .utf8)
         
         for time in times {
             lightControl(light: lightCode[light], bluetoothService: bluetoothService)
             Thread.sleep(forTimeInterval: time)
             light += 1
         }
-
+        
         bluetoothService.writeValue(type: .withoutResponse, data: data!)
+        bluetoothService.writeValue(type: .withoutResponse, data: endData!)
     }
     
     private func lightControl(light: String, bluetoothService: BluetoothServices) {
         let lights = Array(light)
-        let data = "C".data(using: .utf8)
+        let data = "0".data(using: .utf8)
         
         bluetoothService.writeValue(type: .withoutResponse, data: data!)
         for component in lights {
